@@ -2,7 +2,7 @@ import os
 import shutil
 
 
-readFile = open("data.txt", "r")
+readFile = open(r"/Users/ammarsami/Desktop/ring/Ammar/"+ "data.txt", "r")
 for line in readFile:
     line_array = line.split(".")
     del line_array[2]
@@ -14,7 +14,7 @@ for line in readFile:
     if not os.path.exists(path_to):
         
             os.makedirs(path_to)
-            path_from = r"/Users/ammarsami/Desktop/to make new/data/"+ str(line_array[0])+"/"+ str(line_array[1])
+            path_from = r"/Users/ammarsami/Data/folder_3/"+ str(line_array[0])+"/"+ str(line_array[1])
             shutil.move(path_from, path_to)
            
             path_yes = r"/Users/ammarsami/Desktop/Data" 
@@ -22,4 +22,4 @@ for line in readFile:
             file.write(str(line_array[0])+"."+str(line_array[1]) +"\n")
             file.close()
             
-readFile.close() 
+readFile.close()
